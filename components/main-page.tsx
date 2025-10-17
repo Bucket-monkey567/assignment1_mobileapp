@@ -138,7 +138,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
 
-  // Topic Scroll
+  // Topic Scroll to Added darker youtube theme
   topicScrollContainer: {
     paddingVertical: 8,
     paddingHorizontal: 6,
@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
   },
 
-  // Feed & videos
+  // Feed & videos to fit the theme 
   feed: {
     flex: 1,
     backgroundColor: '#1c1c1c',
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     color: '#a0a0a0',
   },
 
-  // Shorts Scroll (optional)
+  // Shorts Scroll to fit the theme
   shortsContainer: {
     backgroundColor: '#1c1c1c',
     marginTop: 8,
