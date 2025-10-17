@@ -2,10 +2,10 @@ import React from 'react';
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
 
 const shorts = [
-  { id: 1, image: require('../assets/images/daft-punk.jpg'), title: 'Pug Goes Viral!' },
-  { id: 2, image: require('../assets/images/shrek.jpg'), title: 'Daft Punk Rehearsal 😱' },
-  { id: 3, image: require('../assets/images/daft-punk.jpg'), title: 'Shrek Dancing Compilation' },
-  { id: 4, image: require('../assets/images/shrek.jpg'), title: 'Quick Coding Tips' },
+  { id: 1, image: require('../assets/images/pugs.jpg'), title: 'Pug Goes Viral!' },
+  { id: 2, image: require('../assets/images/daft-punk.jpg'), title: 'Daft Punk Rehearsal 😱' },
+  { id: 3, image: require('../assets/images/shrek.jpg'), title: 'Shrek Dancing Compilation' },
+  { id: 4, image: require('../assets/images/coder.jpg'), title: 'Quick Coding Tips' },
 ];
 
 const ShortsScroll = () => {
