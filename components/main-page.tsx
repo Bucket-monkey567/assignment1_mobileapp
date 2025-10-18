@@ -1,12 +1,10 @@
 import React from 'react'
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
 import ShortsScroll from './ShortScroll'
 import TopicScroll from './TopicScroll'
 
 // TO DO: 
-// - find new notification icon, cuz that one sucks
-// - Fix layout of icons and 'YubTub' text
-// - fix general layout of page, matching it to YouTube page
+// - find new notification icon, cuz that one sucks - Not done
 // - implement filters and scrollable functionality (including for feed)
 // - add alert button thingy
 
@@ -38,6 +36,7 @@ const MainPage = () => {
         {/* Topic Scroll Section */}
       <TopicScroll />
 
+      <ScrollView showsVerticalScrollIndicator={false}>
       {/* Shorts Section */}
       <ShortsScroll />
 
@@ -91,6 +90,7 @@ const MainPage = () => {
             </View>
           </View>
         </View>
+      </ScrollView>
     </View>
   )
 }
