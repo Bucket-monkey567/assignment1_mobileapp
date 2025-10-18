@@ -1,11 +1,10 @@
 import React from 'react'
 import { Image, ScrollView, StyleSheet, Text, View } from 'react-native'
+import AlertButton from './AlertButton'
 import ShortsScroll from './ShortScroll'
 import TopicScroll from './TopicScroll'
 
 // TO DO: 
-// - find new notification icon, cuz that one sucks - Not done
-// - implement filters and scrollable functionality (including for feed)
 // - add alert button thingy
 
 const MainPage = () => {
@@ -18,7 +17,7 @@ const MainPage = () => {
             style={styles.logo} 
             />
             <Text style={styles.yubTub}>YubTub</Text>
-            <View style={styles.headerIcons}> 
+            <View style={styles.Icons}> 
                 <Image 
                 source={require('../assets/images/share-screen-icon.png')} 
                 style={styles.icon} 
@@ -91,6 +90,28 @@ const MainPage = () => {
           </View>
         </View>
       </ScrollView>
+      {/* Footer Section */}
+      <View style={styles.footer}>
+        <View style={styles.footerItem}>
+          <Image 
+            source={require('../assets/images/home_icon.png')} 
+            style={styles.footerIcon}
+          />
+          <Image 
+            source={require('../assets/images/shorts_icon.png')} 
+            style={styles.footerIcon}
+          />
+          <AlertButton />
+          <Image
+            source={require('../assets/images/lib-icon.png')}
+            style={styles.footerIcon}
+          />
+          <Image
+            source={require('../assets/images/prof-icon.png')}
+            style={styles.footerIcon}
+          />
+        </View>
+      </View>
     </View>
   )
 }
@@ -127,7 +148,7 @@ const styles = StyleSheet.create({
     marginLeft: 8,
     flex: 1,
   },
-  headerIcons: {
+  Icons: {
     flexDirection: 'row',
     alignItems: 'center',
   },
@@ -224,5 +245,29 @@ const styles = StyleSheet.create({
     marginTop: 4,
     textAlign: 'center',
   },
+   footer: {
+    backgroundColor: '#282828', // matches topic scroll
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    marginBottom: 0,
+  },
+  footerItem: {
+  flexDirection: 'row',
+  paddingHorizontal: 20,
+  alignItems: 'center',
+  justifyContent: 'center',
+  flex: 1, // evenly distribute space across 5 icons
+  },
+  footerIcon: {
+    height: 28,
+    width: 28,
+    resizeMode: 'contain',
+    marginHorizontal: 30,
+  },
+
+
 });
 
