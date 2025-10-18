@@ -4,9 +4,6 @@ import AlertButton from './AlertButton'
 import ShortsScroll from './ShortScroll'
 import TopicScroll from './TopicScroll'
 
-// TO DO: 
-// - add alert button thingy
-
 const MainPage = () => {
   return (
     <View style={styles.container}>
@@ -245,6 +242,7 @@ const styles = StyleSheet.create({
     marginTop: 4,
     textAlign: 'center',
   },
+  // Footer
    footer: {
     backgroundColor: '#282828', // matches topic scroll
     flexDirection: 'row',
