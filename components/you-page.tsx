@@ -41,7 +41,7 @@ const MainPage = () => {
         {/* profile header */}
         <View style={styles.videoInfo}>
             <Image 
-              source={require('../assets/images/prof-icon.png')} 
+              source={require('../assets/images/prof_image.png')} 
               style={styles.channelPic} 
             />
             <View style={styles.videoText}>
@@ -91,7 +91,7 @@ const MainPage = () => {
           />
           <TouchableOpacity onPress={() => router.push("../profile")}>
             <Image
-              source={require('../assets/images/prof-icon.png')}
+              source={require('../assets/images/prof_image.png')}
               style={styles.footerIcon}
             />
           </TouchableOpacity>
