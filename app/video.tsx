@@ -1,6 +1,6 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
 import VideoPage from '@/components/video-page';
+import React from 'react';
+import { View } from 'react-native';
 
 export default function Video() {
   return (

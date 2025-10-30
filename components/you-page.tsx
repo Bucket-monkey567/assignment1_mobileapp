@@ -63,11 +63,11 @@ const MainPage = () => {
         
         {/* buttons view other aspects of profile page */}
         <View style={styles.videoText}>
-            <text style={styles.profileName}>Your Videos</text>
-            <text style={styles.profileName}>Badges</text>
-            <text style={styles.profileName}>Your Movies & TV</text>
-            <text style={styles.profileName}>Time Watched</text>
-            <text style={styles.profileName}>Help & feedback</text>
+            <Text style={styles.profileName}>Your Videos</Text>
+            <Text style={styles.profileName}>Badges</Text>
+            <Text style={styles.profileName}>Your Movies & TV</Text>
+            <Text style={styles.profileName}>Time Watched</Text>
+            <Text style={styles.profileName}>Help & feedback</Text>
 
         </View>
       </ScrollView>
