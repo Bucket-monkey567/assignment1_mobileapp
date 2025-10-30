@@ -26,6 +26,18 @@ const MainPage = () => {
 
       {/* Scrollable Feed */}
       <ScrollView showsVerticalScrollIndicator={false}>
+      <Text style={styles.featuredVideoTitle}>
+        Daft Punk is BACK?!
+      </Text>
+      <View style={styles.videoInfo}>
+        <Image 
+          source={require('../assets/images/daft-punk-channel.jpg')} 
+          style={styles.channelPic} 
+        />
+        <Text style={styles.videoSubtitle}>
+          daftclub • 2.1M views • 3 days ago
+        </Text>
+      </View>
         <TopicScroll />
         <ShortsScroll />
 
@@ -138,6 +150,13 @@ const styles = StyleSheet.create({
     height: 500,
     width: '100%',
   },
+  featuredVideoTitle: {
+    fontWeight: 'bold',
+    fontSize: 25,
+    color: '#f1f1f1',
+    marginTop: 8,
+    marginHorizontal: 10,
+  },
 
   videoInfo: {
     flexDirection: 'row',
@@ -163,7 +182,7 @@ const styles = StyleSheet.create({
 
   videoSubtitle: {
     fontSize: 14,
-    marginTop: 4,
+    marginTop: 25,
     color: '#a0a0a0',
   },
 
