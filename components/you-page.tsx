@@ -4,9 +4,10 @@ import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'rea
 import AlertButton from './AlertButton'
 import TopicScroll from './TopicScroll'
 import HistoryScroll from "./historyScroll"
+import PlaylistScroll from "./playlistScroll"
 
 const MainPage = () => {
-  const router = useRouter(); // put this inside MainPage
+  const router = useRouter();
   return (
     <View style={styles.container}>
         {/* Here is the header olong with the icons that should be in it */}
@@ -54,6 +55,19 @@ const MainPage = () => {
       <ScrollView showsVerticalScrollIndicator={false}>
       {/* watch history */}
         <HistoryScroll />
+        
+        {/* playlist section */}
+        <PlaylistScroll />
+        
+        {/* buttons view other aspects of profile page */}
+        <View style={styles.videoText}>
+            <text style={styles.profileName}>Your Videos</text>
+            <text style={styles.profileName}>Badges</text>
+            <text style={styles.profileName}>Your Movies & TV</text>
+            <text style={styles.profileName}>Time Watched</text>
+            <text style={styles.profileName}>Help & feedback</text>
+
+        </View>
       </ScrollView>
       {/* Footer Section */}
       <View style={styles.footer}>
