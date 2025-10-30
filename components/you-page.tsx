@@ -2,8 +2,8 @@ import { useRouter } from "expo-router"
 import React from 'react'
 import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import AlertButton from './AlertButton'
-import ShortsScroll from './ShortScroll'
 import TopicScroll from './TopicScroll'
+import HistoryScroll from "./historyScroll"
 
 const MainPage = () => {
   const router = useRouter(); // put this inside MainPage
@@ -29,73 +29,41 @@ const MainPage = () => {
                 source={require('../assets/images/search-icon.png')} 
                 style={styles.icon} 
                 />
+                <Image
+                source={require('../assets/images/settings_icon.png')}
+                style={styles.icon}
+                />
             </View> 
         </View>
+        {/* profile header */}
+        <View style={styles.videoInfo}>
+            <Image 
+              source={require('../assets/images/prof-icon.png')} 
+              style={styles.channelPic} 
+            />
+            <View style={styles.videoText}>
+              <Text style={styles.profileName}>daftclub</Text>
+              <Text style={styles.videoSubtitle}>@daftclub • View channel</Text>
+            </View>
+          </View>
+
+
         {/* Topic Scroll Section */}
-      <TopicScroll />
+        <TopicScroll />
 
       <ScrollView showsVerticalScrollIndicator={false}>
-      {/* Shorts Section */}
-      <ShortsScroll />
-
-        {/* Feed */}
-        <View style={styles.feed}>
-          {/* #1 */}
-          <Image 
-            source={require('../assets/images/daft-punk.jpg')} 
-            style={styles.thumbnail} 
-          />
-          <View style={styles.videoInfo}>
-            <Image 
-              source={require('../assets/images/daft-punk-channel.jpg')} 
-              style={styles.channelPic} 
-            />
-            <View style={styles.videoText}>
-              <Text style={styles.videoTitle}>Daft Punk is BACK?!</Text>
-              <Text style={styles.videoSubtitle}>daftclub • 22.1K views • 3 days ago</Text>
-            </View>
-          </View>
-
-          {/* #2 */}
-          <Image 
-            source={require('../assets/images/pugs.jpg')} 
-            style={styles.thumbnail} 
-          />
-          <View style={styles.videoInfo}>
-            <Image 
-              source={require('../assets/images/pugs-channel.jpg')} 
-              style={styles.channelPic} 
-            />
-            <View style={styles.videoText}>
-              <Text style={styles.videoTitle}>Cute Pug Moments That Will Make Your Heart Melt</Text>
-              <Text style={styles.videoSubtitle}>Puglover101 • 6.7M views • 3 weeks ago</Text>
-            </View>
-          </View>
-
-          {/* #3 */}
-          <Image 
-            source={require('../assets/images/shrek.jpg')} 
-            style={styles.thumbnail} 
-          />
-          <View style={styles.videoInfo}>
-            <Image 
-              source={require('../assets/images/shrek-channel.jpg')} 
-              style={styles.channelPic} 
-            />
-            <View style={styles.videoText}>
-              <Text style={styles.videoTitle}>The Amazing Journey of Shrek</Text>
-              <Text style={styles.videoSubtitle}>MoreThanAnOgre • 30.5K views • 4 days ago</Text>
-            </View>
-          </View>
-        </View>
+      {/* watch history */}
+        <HistoryScroll />
       </ScrollView>
       {/* Footer Section */}
       <View style={styles.footer}>
         <View style={styles.footerItem}>
-          <Image 
-            source={require('../assets/images/home_icon.png')} 
-            style={styles.footerIcon}
-          />
+            <TouchableOpacity onPress={() => router.push("/")}>
+                <Image 
+                source={require('../assets/images/home_icon.png')} 
+                style={styles.footerIcon}
+                />
+          </TouchableOpacity>
           <Image 
             source={require('../assets/images/shorts_icon.png')} 
             style={styles.footerIcon}
@@ -269,6 +237,11 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginHorizontal: 30,
   },
+  profileName: {
+    fontWeight: 'bold',
+    fontSize: 40,
+    color: '#f1f1f1'
+    },
 
 
 });
