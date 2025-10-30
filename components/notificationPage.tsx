@@ -121,7 +121,7 @@ const Notification = () => {
             style={styles.footerIcon}
           />
           <Image
-            source={require('../assets/images/prof-icon.png')}
+            source={require('../assets/images/prof_image.png')}
             style={styles.footerIcon}
           />
         </View>
