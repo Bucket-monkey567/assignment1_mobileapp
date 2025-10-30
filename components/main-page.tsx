@@ -21,12 +21,10 @@ const MainPage = () => {
                 source={require('../assets/images/share-screen-icon.png')} 
                 style={styles.icon} 
                 />
-                <TouchableOpacity onPress={() => router.push("../notification")}>
-                  <Image 
-                  source={require('../assets/images/notification-icon.png')} 
-                  style={styles.icon} 
-                  />
-                </TouchableOpacity>
+                <Image 
+                source={require('../assets/images/notification-icon.png')} 
+                style={styles.icon} 
+                />
                 <Image 
                 source={require('../assets/images/search-icon.png')} 
                 style={styles.icon} 
@@ -60,7 +58,6 @@ const MainPage = () => {
           </View>
           </TouchableOpacity>
           
-
           {/* #2 */}
           <Image 
             source={require('../assets/images/pugs.jpg')} 

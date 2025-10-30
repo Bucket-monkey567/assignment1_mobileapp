@@ -10,13 +10,18 @@ import {
 
 import TopicScroll from './TopicScroll'
 import ShortsScroll from './ShortScroll'
+import { useRouter } from 'expo-router'
 
 const MainPage = () => {
+  const router = useRouter();
   return (
     <View style={styles.container}>
       
       {/* App Title */}
-      <Text style={styles.yubTub}>YubTub</Text>
+      <TouchableOpacity onPress={() => router.push("/")}>
+        <Text style={styles.yubTub}>Back</Text>
+      </TouchableOpacity>
+      
 
       {/* Featured Video */}
       <Image 
@@ -29,14 +34,18 @@ const MainPage = () => {
       <Text style={styles.featuredVideoTitle}>
         Daft Punk is BACK?!
       </Text>
+      <Text style={styles.videoSubtitle}>
+          5.4M views • 1 day ago
+        </Text>
       <View style={styles.videoInfo}>
         <Image 
           source={require('../assets/images/daft-punk-channel.jpg')} 
           style={styles.channelPic} 
         />
-        <Text style={styles.videoSubtitle}>
-          daftclub • 2.1M views • 3 days ago
+        <Text style={styles.yubTub}>
+          daftclub
         </Text>
+        
       </View>
         <TopicScroll />
         <ShortsScroll />
@@ -182,8 +191,9 @@ const styles = StyleSheet.create({
 
   videoSubtitle: {
     fontSize: 14,
-    marginTop: 25,
+    marginTop: 5,
     color: '#a0a0a0',
+    marginLeft: 10,
   },
 
   // Topic Scroll
