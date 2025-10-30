@@ -1,7 +1,11 @@
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native'
-import React from 'react'
+import { useRouter } from "expo-router";
+import React from 'react';
+import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+
 
 const Notification = () => {
+  const router = useRouter();
   const notifications = [
     { 
       id: 1, 
@@ -51,10 +55,12 @@ const Notification = () => {
     <View style={styles.container}>
       {/* Notification Header */}
       <View style={styles.notificationHeader}>
-        <Image 
-        source={require('../assets/images/back-arrow.jpg')}
-        style={styles.back} 
-        />
+        <TouchableOpacity onPress={() => router.push("/")}>
+          <Image 
+          source={require('../assets/images/back-arrow.jpg')}
+          style={styles.back} 
+          />
+        </TouchableOpacity>
         <Text style={styles.notification}>Notifications</Text>
         <View style={styles.icons}> 
           <Image 
@@ -98,27 +104,6 @@ const Notification = () => {
           </View>
         ))}
       </ScrollView>
-
-      <View style={styles.footer}>
-        <View style={styles.footerItem}>
-          <Image 
-            source={require('../assets/images/home_icon.png')} 
-            style={styles.footerIcon}
-          />
-          <Image 
-            source={require('../assets/images/shorts_icon.png')} 
-            style={styles.footerIcon}
-          />
-          <Image
-            source={require('../assets/images/lib-icon.png')}
-            style={styles.footerIcon}
-          />
-          <Image
-            source={require('../assets/images/prof-icon.png')}
-            style={styles.footerIcon}
-          />
-        </View>
-      </View>
     </View>
   )
 }
