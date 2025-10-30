@@ -104,6 +104,28 @@ const Notification = () => {
           </View>
         ))}
       </ScrollView>
+      {/* Footer */}
+      <View style={styles.footer}>
+        <View style={styles.footerItem}>
+          <Image 
+            source={require('../assets/images/home_icon.png')} 
+            style={styles.footerIcon}
+          />
+
+          <Image 
+            source={require('../assets/images/shorts_icon.png')} 
+            style={styles.footerIcon}
+          />
+          <Image
+            source={require('../assets/images/lib-icon.png')}
+            style={styles.footerIcon}
+          />
+          <Image
+            source={require('../assets/images/prof-icon.png')}
+            style={styles.footerIcon}
+          />
+        </View>
+      </View>
     </View>
   )
 }
