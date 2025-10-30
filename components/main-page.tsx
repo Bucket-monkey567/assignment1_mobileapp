@@ -41,10 +41,11 @@ const MainPage = () => {
         {/* Feed */}
         <View style={styles.feed}>
           {/* #1 */}
-          <Image 
+          <TouchableOpacity onPress={() => router.push("../video.tsx")}>
+            <Image 
             source={require('../assets/images/daft-punk.jpg')} 
             style={styles.thumbnail} 
-          />
+            />
           <View style={styles.videoInfo}>
             <Image 
               source={require('../assets/images/daft-punk-channel.jpg')} 
@@ -55,9 +56,11 @@ const MainPage = () => {
               <Text style={styles.videoSubtitle}>daftclub • 22.1K views • 3 days ago</Text>
             </View>
           </View>
+          </TouchableOpacity>
+          
 
           {/* #2 */}
-          <Image 
+          <TouchableOpacity onPress={() => router.push("../video.tsx")}><Image 
             source={require('../assets/images/pugs.jpg')} 
             style={styles.thumbnail} 
           />
@@ -71,8 +74,11 @@ const MainPage = () => {
               <Text style={styles.videoSubtitle}>Puglover101 • 6.7M views • 3 weeks ago</Text>
             </View>
           </View>
+          </TouchableOpacity>
+          
 
           {/* #3 */}
+          <TouchableOpacity onPress={() => router.push("../video.tsx")}>
           <Image 
             source={require('../assets/images/shrek.jpg')} 
             style={styles.thumbnail} 
@@ -87,6 +93,7 @@ const MainPage = () => {
               <Text style={styles.videoSubtitle}>MoreThanAnOgre • 30.5K views • 4 days ago</Text>
             </View>
           </View>
+          </TouchableOpacity>
         </View>
       </ScrollView>
       {/* Footer Section */}
