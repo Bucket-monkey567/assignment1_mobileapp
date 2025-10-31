@@ -1,6 +1,6 @@
 import { useRouter } from "expo-router"
 import React from 'react'
-import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Platform, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import AlertButton from './AlertButton'
 import TopicScroll from './TopicScroll'
 import HistoryScroll from "./historyScroll"
@@ -120,6 +120,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 8,
     marginBottom: 0,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
   },
   logo: {
     height: 40,

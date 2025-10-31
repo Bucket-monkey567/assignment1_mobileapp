@@ -1,7 +1,6 @@
 import { useRouter } from "expo-router";
 import React from 'react';
-import { Image, ScrollView, StyleSheet, Text, View } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
+import { Image, Platform, ScrollView, StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 
 const Notification = () => {
@@ -146,6 +145,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 8,
     marginBottom: 0,
+    paddingTop: Platform.OS === 'android' ? StatusBar.currentHeight : 0,
+
   },
   back: {
     height: 40,
